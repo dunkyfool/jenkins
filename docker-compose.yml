@@ -1,0 +1,10 @@
+version: '2'
+services:
+  jenkins:
+    image: jenkins:latest
+    volumes:
+      - /data/jenkins:/opt/jenkins
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "8080:8080"
+      - "50000:50000"
